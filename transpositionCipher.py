@@ -1,7 +1,7 @@
 import math
 def transPositionCipher():
-    key = int(raw_input("Enter the key:"))
-    message = raw_input("Enter the message to encrypt:")
+    key = int(input("Enter the key:"))
+    message = input("Enter the message to encrypt:")
     ciphertext = [''] * key
     for col in range(key):
         pointer = col
@@ -11,8 +11,8 @@ def transPositionCipher():
     ciphertext = ''.join(ciphertext)
     print(ciphertext + '|')
 def decrypttransPositionCipher():
-    key = int(raw_input("Enter the decryption key:"))
-    message = raw_input("Enter the message to Decrypt:")
+    key = int(input("Enter the decryption key:"))
+    message = input("Enter the message to Decrypt:")
     mycols = int(math.ceil(float(len(message))/key))
     myrows = key
     myshadedboxes = (mycols * myrows) -len(message)

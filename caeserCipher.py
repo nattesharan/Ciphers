@@ -1,4 +1,5 @@
 def caeserCifer():
+    # get the encryption key
     key = int(input("Enter the key for encryption:"))
     messageToEncrypt = input("Enter the message to encrypt:")
     messageToEncrypt = messageToEncrypt.upper()
@@ -25,11 +26,8 @@ def decryptCifer():
             dchar = dchar + 26
             decryptedMessage += chr(dchar)
     print(decryptedMessage.replace(':',' '))
-def bruteForceForDecryption(key,a):
-    global inputGiven
+def bruteForceForDecryption(key,messageToDecrypt):
     if key <= 25:
-        messageToDecrypt = a
-        key = key
         decryptedMessage = ''
         for i in messageToDecrypt:
             dchar = ord(i) - key

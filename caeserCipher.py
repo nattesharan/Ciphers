@@ -1,6 +1,6 @@
 def caeserCifer():
-    key = int(raw_input("Enter the key for encryption:"))
-    messageToEncrypt = raw_input("Enter the message to encrypt:")
+    key = int(input("Enter the key for encryption:"))
+    messageToEncrypt = input("Enter the message to encrypt:")
     messageToEncrypt = messageToEncrypt.upper()
     encryptedMessage = ''
     for i in messageToEncrypt:
@@ -13,8 +13,8 @@ def caeserCifer():
     print(encryptedMessage)
     return encryptedMessage
 def decryptCifer():
-    key = int(raw_input("Enter the key for decryption:"))
-    messageToDecrypt = raw_input("Enter the message to decrypt:")
+    key = int(input("Enter the key for decryption:"))
+    messageToDecrypt = input("Enter the message to decrypt:")
     messageToDecrypt = messageToDecrypt.upper()
     decryptedMessage = ''
     for i in messageToDecrypt:
@@ -39,7 +39,7 @@ def bruteForceForDecryption(key,a):
                 dchar = dchar + 26
                 decryptedMessage += chr(dchar)
         print(decryptedMessage.replace(':',' '))
-        opt = raw_input("Does the decrypted message has some meaning(y or n):")
+        opt = input("Does the decrypted message has some meaning(y or n):")
         if opt.lower() == 'y':
             pass
         if opt.lower() == 'n':
